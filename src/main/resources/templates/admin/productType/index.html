@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head th:include="~{layout/_layoutAdmin ::head}">
+    <meta charset="UTF-8">
+    <title>Product Type Index</title>
+</head>
+<body>
+<div th:replace="~{layout/_layoutAdmin ::header}"></div>
+<h1>Product Types</h1>
+<table class="table table-light">
+    <thead class="table-dark">
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Status</td>
+        </tr>
+    </thead>
+    <tbody>
+    <tr th:each="item : ${productTypeList}">
+        <td th:text="${item.id}">ID</td>
+        <td th:text="${item.name}">Name</td>
+        <td th:text="${item.status}">Status</td>
+    </tr>
+    </tbody>
+</table>
+
+<div th:replace="~{layout/_layoutAdmin ::footer}"></div>
+</body>
+</html>

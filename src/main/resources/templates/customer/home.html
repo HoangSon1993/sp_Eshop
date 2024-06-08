@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:include="layout/_layout ::head">
+    <title>Home Page</title>
+</head>
+<body>
+<!--Layout:: header-->
+<div th:replace="layout/_layout ::header"></div>
+
+<!--Main content-->
+<div th:fragment="content">
+    <div class="container">
+        <div class="hero-unit">
+            <h1>Welcome to the Home Page</h1>
+            <p>This is the home page content.</p>
+            <p>
+                <a th:href="@{/signup}" class="btn btn-large btn-success">Sign up</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<!--Layout:: footer-->
+<div th:replace="layout/_layout ::footer"></div>
+</body>
+</html>

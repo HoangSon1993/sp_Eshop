@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${pageTitle}">Default Title</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/global.css}">
+</head>
+<body>
+<div th:fragment="header">
+    <div th:replace="~{layout/fragments/header :: header}"></div>
+</div>
+
+<div th:fragment="content">
+    <!-- Nội dung trang cụ thể sẽ được chèn vào đây -->
+</div>
+
+<div th:fragment="footer">
+    <div th:replace="~{layout/fragments/footer :: footer}"></div>
+</div>
+
+</body>
+</html>
